@@ -13,8 +13,12 @@ import java.util.Scanner;
 @SpringBootApplication
 public class NorthwindApplication implements CommandLineRunner {
 
-    @Autowired
+
     private  ProductDAO productDAO;
+
+    public NorthwindApplication(ProductDAO productDAO) {
+        this.productDAO = productDAO;
+    }
 
     @Override
     public void run(String... args) throws Exception {
